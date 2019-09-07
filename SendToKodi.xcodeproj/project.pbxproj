@@ -15,6 +15,8 @@
 		CDB0615D1C498D0900E6E652 /* ShareViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDB0615B1C498D0900E6E652 /* ShareViewController.xib */; };
 		CDB061611C498D0900E6E652 /* SendToKodiAction.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = CDB061531C498D0900E6E652 /* SendToKodiAction.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		CDF0EB891FF536FB0029401E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDF0EB881FF536FB0029401E /* Assets.xcassets */; };
+		E14167272324002C00C07A70 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14167262324002C00C07A70 /* Utils.swift */; };
+		E1416728232400C100C07A70 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14167262324002C00C07A70 /* Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,7 @@
 		CDB0615E1C498D0900E6E652 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CDB061661C49ABA300E6E652 /* SendToKodi.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = SendToKodi.entitlements; sourceTree = "<group>"; };
 		CDF0EB881FF536FB0029401E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E14167262324002C00C07A70 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +109,7 @@
 			children = (
 				CDB061421C498C5200E6E652 /* AppDelegate.swift */,
 				CDB061461C498C5300E6E652 /* MainMenu.xib */,
+				E14167262324002C00C07A70 /* Utils.swift */,
 				CDB061661C49ABA300E6E652 /* SendToKodi.entitlements */,
 				CDF0EB881FF536FB0029401E /* Assets.xcassets */,
 				CDB061491C498C5300E6E652 /* Info.plist */,
@@ -267,6 +271,7 @@
 			files = (
 				CDB061431C498C5200E6E652 /* AppDelegate.swift in Sources */,
 				CD8E97E11C556DB900E6E652 /* SendToKodi.swift in Sources */,
+				E14167272324002C00C07A70 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +279,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1416728232400C100C07A70 /* Utils.swift in Sources */,
 				CD8E97E21C556E2300E6E652 /* SendToKodi.swift in Sources */,
 				CDB0615A1C498D0900E6E652 /* ShareViewController.swift in Sources */,
 			);

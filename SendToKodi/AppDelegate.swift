@@ -32,3 +32,22 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         return true
     }
 }
+
+extension AppDelegate {
+    @objc
+    func droppedText(_ pboard: NSPasteboard, userData:String, error: NSErrorPointer) {
+        let alert = NSAlert()
+        alert.messageText = "hej: \(pboard.string(forType: .string))"
+        alert.runModal()
+        
+        if let urlString = pboard.string(forType: .string), let url = URL(string: urlString) {
+            
+            Utils.sendRequestToKodi(url, completionHandler: {
+                
+                
+            }) { (Error) in
+                
+            }
+        }
+    }
+}
