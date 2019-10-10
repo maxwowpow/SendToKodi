@@ -32,3 +32,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         return true
     }
 }
+
+// macOS Service
+extension AppDelegate {
+    @objc
+    func receiveText(_ pboard: NSPasteboard, userData:String, error: NSErrorPointer) {
+        if let urlString = pboard.string(forType: .string), let url = URL(string: urlString) {
+            Utils.sendRequestToKodi(url, completionHandler: nil, errorHandler: nil)
+        }
+    }
+}
