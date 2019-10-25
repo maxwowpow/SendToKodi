@@ -7,6 +7,9 @@ https://github.com/firsttris/plugin.video.sendtokodi
 ## Supported sites
 https://rg3.github.io/youtube-dl/supportedsites.html
 
+## Download
+https://github.com/maxgrass/SendToKodi/releases
+
 ## Screenshots
 
 ![](doc/screenshot1.png?raw "Screenshot")
