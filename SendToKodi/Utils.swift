@@ -16,7 +16,7 @@ struct Utils {
         
         let requestData = self.generateRequestDataFromUrl(url)
         
-        let request = NSMutableURLRequest(url: URL(string: "http://\(hostname):8080/jsonrpc")!)
+        let request = NSMutableURLRequest(url: URL(string: "http://\(hostname)/jsonrpc")!)
         request.httpMethod = "POST"
         request.setValue("application/json",         forHTTPHeaderField: "Accept")
         request.setValue("application/json",         forHTTPHeaderField: "Content-Type")

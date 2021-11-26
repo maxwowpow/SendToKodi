@@ -16,16 +16,17 @@ class ShareViewController: NSViewController {
         
         progress.startAnimation(nil)
         
-        let item = self.extensionContext!.inputItems[0] as! NSExtensionItem
-        
-        if let attachments = item.attachments {
-            (attachments.first as! NSItemProvider).loadItem(forTypeIdentifier: kUTTypeURL as String, options: nil, completionHandler: { (item, error) -> Void in
-                self.sendRequestToKodi(item as! URL)
-            })
-        }
-        else {
-            let cancelError = NSError(domain: NSCocoaErrorDomain, code: NSUserCancelledError, userInfo: nil)
-            self.extensionContext!.cancelRequest(withError: cancelError)
+        if let item = self.extensionContext?.inputItems.first as? NSExtensionItem {
+            if let attachment = item.attachments?.first,
+               attachment.hasItemConformingToTypeIdentifier("public.url") {
+                attachment.loadObject(ofClass: NSURL.self, completionHandler: {(res, err) in
+                    self.sendRequestToKodi(res as! URL)
+                })
+            }
+            else {
+                let cancelError = NSError(domain: NSCocoaErrorDomain, code: NSUserCancelledError, userInfo: nil)
+                self.extensionContext!.cancelRequest(withError: cancelError)
+            }
         }
     }
     
